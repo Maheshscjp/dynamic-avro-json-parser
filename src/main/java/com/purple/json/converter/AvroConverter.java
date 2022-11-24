@@ -145,7 +145,7 @@ public class AvroConverter {
 
 				ObjectNode unionNullNode = mapper.createObjectNode();
 				unionNullNode.put(NAME, map.getKey());
-				unionNullNode.putArray(TYPE).add(NULL);
+				unionNullNode.putArray(TYPE).add(NULL).add(STRING).add("double");
 				fields.add(unionNullNode);
 				break;
 
